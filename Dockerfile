@@ -1,14 +1,10 @@
-FROM arm64v8/node:18
+FROM arm64v8/node:20
 
 WORKDIR /app
 
-# Update npm
-RUN npm install -g npm@latest
-
 COPY package*.json ./
 
-# Install with legacy peer deps if needed
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 COPY . .
 
