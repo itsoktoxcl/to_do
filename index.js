@@ -6,6 +6,7 @@ const requestListener = function (req, res) {
     res.writeHead(200);
     res.end("My first server!");
 };
+// adding comments
 
 const server = http.createServer(requestListener);
 server.listen(port, host, () => {
