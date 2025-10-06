@@ -13,6 +13,7 @@ Accept-Language: ${req.headers['accept-language']}
 Accept-Encoding: ${req.headers['accept-encoding']}
 Connection: ${req.headers['connection']}
 Host: ${req.headers['host']}
+Some Additional Info : Some additional info
 
 All Headers:
 ${JSON.stringify(req.headers, null, 2)}
