@@ -21,3 +21,12 @@ ${JSON.stringify(req.headers, null, 2)}
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end(clientInfo);
 };
+
+
+const http = require('http');
+
+const server = http.createServer(requestListener);
+server.listen(8080, () => {
+    console.log('Server is running on http://localhost:8080');
+});
+
